@@ -6,7 +6,7 @@ interface ITransaction extends Document {
   subsscriptionPlan: string;
   duration: string;
   amountCharged: number;
-  nextDueDate: string;
+  expirationDate: any;
 }
 
 export { ITransaction };

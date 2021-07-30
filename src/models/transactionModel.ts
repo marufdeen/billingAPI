@@ -6,15 +6,14 @@ const transactionSchema = new Schema(
     userId: {
       type: Schema.Types.ObjectId,
       ref: "User",
-    },
-    secret: {
-      iv: String,
-      encryptedData: String,
-    },
+    }, 
+    subsscriptionPlan: String,
+    duration: String,
+    amountCharged: Number,
     expirationDate: Date,
   },
   { timestamps: true }
 );
-const transaction = mongoose.model<ITransaction>("transaction", transactionSchema);
+const Transaction = mongoose.model<ITransaction>("Transaction", transactionSchema);
 
-export { transaction };
+export { Transaction };
